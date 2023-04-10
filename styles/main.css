@@ -19,14 +19,18 @@ body {
   background-color: var(--Background-color);
 }
 
-.image img {
+.image {
+  height: 100vh;
+}
+
+.image img {  
   background-position: center;
   background-repeat: no-repeat;
+  background-size: contain;
   background-attachment: fixed;
-  background-size: cover;
-  opacity: 0.95;
-  height: 100vh;
+  object-fit: cover;
   width: 100vw;
+  opacity: 0.95;
 }
 
 .info-contain {
@@ -86,22 +90,37 @@ body {
 }
 
 .articles-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  /* grid-template-rows: repeat(2, 1fr); */
-  font-size: 1.5rem;
-  margin: 30rem 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--Background-color);
+  position: relative;
 }
 
+.blog-contain {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
 
 .heading {
-  grid-area: 1/1/5/5;
   place-self: center;
+  position: absolute;
+  bottom: 85%;
+  font-size: 2.5rem;
 }
 
 .blog {
-  width: 200px;
+  width: 250px;
   height: 200px;
   background-color: var(--Complementary-color);
+  border-radius: 3px;
+  padding: 2rem;
   overflow:scroll;
+}
+
+.blog h3 {
+  text-align: center;
 }
