@@ -23,7 +23,7 @@ body {
   height: 100vh;
 }
 
-.image img {  
+.image img {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
@@ -35,7 +35,7 @@ body {
 
 .info-contain {
   position: absolute;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--Text-color);
   top: 50%;
   left: 50%;
@@ -65,7 +65,6 @@ body {
 /* menu  */
 .menu-container {
   position: absolute;
-  color: var(--Background-color) !important;
   z-index: 1;
   left: 50%;
   top: 1.5rem;
@@ -80,8 +79,9 @@ body {
 
 .menu a {
   color: var(--Text-color) !important;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   transition: 5ms;
+  text-decoration: none;
 }
 
 .menu a:hover {
@@ -109,7 +109,7 @@ body {
   place-self: center;
   position: absolute;
   bottom: 85%;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 .blog {
@@ -118,9 +118,43 @@ body {
   background-color: var(--Complementary-color);
   border-radius: 3px;
   padding: 2rem;
-  overflow:scroll;
+  overflow: scroll;
 }
 
 .blog h3 {
   text-align: center;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--Primary-color);
+  color: var(--Background-color);
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.foot-contain {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  border: 1px solid var(--Background-color);
+  margin: 0 auto;
 }

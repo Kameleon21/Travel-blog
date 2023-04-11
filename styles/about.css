@@ -1,0 +1,89 @@
+:root {
+  --Primary-color: #000;
+  --Complementary-color: #bdf1fd;
+  --Accent-color: #00bcd4;
+  --Background-color: #f5f5f5;
+  --Text-color: #212121;
+}
+
+.ui.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-container {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.menu a {
+  color: var(--Text-color) !important;
+  font-size: 1.7rem;
+  transition: 5ms;
+  text-decoration: none;
+}
+
+.menu a:hover {
+  color: var(--Accent-color) !important;
+  transform: scale(1.2);
+}
+
+.ui.segment {
+  position: relative;
+  margin-top: auto;
+}
+
+.one {
+  background-image: url(../images/colton-sturgeon-odKeTFsBDgE-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  margin-top: auto;
+  background-color: var(--Primary-color);
+  color: var(--Background-color);
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.foot-contain {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  gap: 3.5rem;
+}
+
+.left-side,
+.right-side {
+  display: flex;
+  flex-direction: column;
+}
+
+.divider {
+  border: 1px solid var(--Background-color);
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .menu a {
+    display: block;
+  }
+}

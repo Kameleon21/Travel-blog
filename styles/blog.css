@@ -1,0 +1,11 @@
+:root {
+  --Primary-color: #000;
+  --Complementary-color: #bdf1fd;
+  --Accent-color: #00bcd4;
+  --Background-color: #f5f5f5;
+  --Text-color: #212121;
+}
+
+.container {
+  background-color: var(--Background-color);
+}
