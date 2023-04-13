@@ -54,15 +54,17 @@ footer {
   color: var(--Background-color);
   display: flex;
   justify-content: center;
-  padding: 1.5rem;
+  padding: 1rem;
+  min-height: 200px;
 }
 
 .foot-contain {
   text-align: center;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   gap: 2rem;
+  width: 800px;
+  min-height: 150px;
 }
 
 .content {
@@ -72,6 +74,7 @@ footer {
 }
 
 .left-side,
+.mid-side,
 .right-side {
   display: flex;
   flex-direction: column;
@@ -79,11 +82,4 @@ footer {
 
 .divider {
   border: 1px solid var(--Background-color);
-  margin: 0 auto;
-}
-
-@media screen and (max-width: 600px) {
-  .menu a {
-    display: block;
-  }
 }
