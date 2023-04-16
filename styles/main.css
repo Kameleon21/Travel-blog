@@ -95,13 +95,14 @@ body {
 }
 
 /* Main section */
-main h2 {
+.main-head {
+  font-size: 2.5rem;
   margin-top: 4rem !important;
   text-align: center;
 }
 
 .ui.segment {
-  margin: 2rem 0rem !important;
+  margin: 2.5rem 0rem !important;
 }
 
 .img {
@@ -109,8 +110,13 @@ main h2 {
   background-repeat: no-repeat;
   background-position: center;
 }
+
+.column.two > h3 {
+  text-align: center;
+  font-size: 1.5rem;
+}
 .one {
-  background-image: url(../images/jack-ward-rknrvCrfS1k-unsplash.jpg);
+  background-image: url(../images/cristina-gottardi-I1Lv2yX67GI-unsplash.jpg);
 }
 
 .second {
@@ -164,7 +170,6 @@ footer {
 }
 
 /* Styles for animation */
-.main-head,
 .num-one,
 .num-two,
 .num-three,
@@ -172,7 +177,6 @@ footer {
   opacity: 0;
 }
 
-.main-head.animate__animated,
 .num-one.animate__animated,
 .num-two.animate__animated,
 .num-three.animate__animated,

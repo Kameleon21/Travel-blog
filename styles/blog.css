@@ -9,3 +9,8 @@
 .container {
   background-color: var(--Background-color);
 }
+
+
+main {
+  margin:auto !important;
+}
