@@ -8,7 +8,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="stylesheet" href="../styles/about.css" />
     <link rel="stylesheet" href="../styles/blog.css" />
     <title>Blog</title>
@@ -26,61 +25,26 @@
         </div>
       </div>
 
-      <!-- main -->
       <main>
-        <h2 class="blog-head">Blogs Archives</h2>
-        <div class="ui link cards">
+        <div class="ui link cards" id="cards-container"></div>
+
+        <script id="card-template" type="text/x-handlebars-template">
           <div class="card">
             <div class="image">
-              <img
-                src="../images/cristina-gottardi-I1Lv2yX67GI-unsplash.jpg"
-                alt=""
-              />
+              <img src="{{image}}" alt="{{alt}}" />
             </div>
             <div class="content">
-              <div class="header">Italy <i class="flag it"></i></div>
+              <div class="header">{{place}}
+                <i class="flag {{flag}}"></i></div>
+            </div>
+            <div class="read-more-container">
+              <button class="ui grey button read-more">Read More</button>
+            </div>
+            <div class="extra-content" style="display: none;">
+              {{content}}
             </div>
           </div>
-
-          <div class="card">
-            <div class="image">
-              <img src="../images/adam-jang-MLKrf51NV8w-unsplash.jpg" alt="" />
-            </div>
-            <div class="content">
-              <div class="header">Iceland <i class="flag is"></i></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img
-                src="../images/sam-williams-UuGAw6nF0Vw-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="content">
-              <div class="header">Spain <i class="flag es"></i></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img
-                src="../images/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg"
-                alt=""
-              />
-            </div>
-            <div class="content">
-              <div class="header">Norway <i class="flag no"></i></div>
-            </div>
-          </div>
-
-          <div class="card">
-            <div class="image">
-              <img src="../images/constantinos-kollias-yqBvJJ8jGBQ-unsplash.jpg" alt="" />
-            </div>
-          </div>
-        </div>
+        </script>
       </main>
 
       <!-- footer -->
@@ -122,5 +86,8 @@
         </div>
       </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="../js/blog.js"></script>
   </body>
 </html>

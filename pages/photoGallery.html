@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
     />
 
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css"
+    />
     <link rel="stylesheet" href="../styles/about.css" />
     <title>Photo Gallery</title>
   </head>
@@ -21,6 +25,97 @@
           <a href="./photoGallery.html" class="item">Gallery</a>
           <a href="./about.html" class="item">About</a>
           <a href="./contact.html" class="item">Contact</a>
+        </div>
+      </div>
+
+      <div id="container">
+        <h1>Images Taken When Traveling</h1>
+
+        <div id="gallery">
+          <a
+            href="../images/adam-jang-MLKrf51NV8w-unsplash.jpg"
+            data-fancybox="gallery"
+            data-caption="Blue image"
+            ><img
+              src="../images/adam-jang-MLKrf51NV8w-unsplash.jpg"
+              width="70"
+              height="70"
+              alt="Blue"
+              class="lazy"
+          /></a>
+          <a
+            href="../images/colton-sturgeon-odKeTFsBDgE-unsplash.jpg"
+            data-fancybox="gallery"
+            data-caption="Yellow image"
+          >
+            <img src="../images/colton-sturgeon-odKeTFsBDgE-unsplash.jpg"
+            width="70" height="70" alt="Yellow" class="lazy" /
+          </a>
+          <a
+            href="../images/constantinos-kollias-yqBvJJ8jGBQ-unsplash.jpg"
+            data-fancybox="gallery"
+            data-caption="Green image"
+            ><img src="../images/constantinos-kollias-yqBvJJ8jGBQ-unsplash.jpg"
+            width="70" height="70" alt="Green" class="lazy" /
+          </a>
+          <a
+            href="../images/cristina-gottardi-I1Lv2yX67GI-unsplash.jpg"
+            data-fancybox="gallery"
+            data-caption="Orange image"
+            ><img
+              src="../images/cristina-gottardi-I1Lv2yX67GI-unsplash.jpg"
+              width="70"
+              height="70"
+              alt="Orange"
+              class="lazy"
+          /></a>
+          <a
+            href="../images/damiano-baschiera-hFXZ5cNfkOk-unsplash.jpg"
+            data-fancybox="gallery"
+            data-caption="Purple image"
+            ><img
+              src="../images/damiano-baschiera-hFXZ5cNfkOk-unsplash.jpg"
+              width="70"
+              height="70"
+              alt="Purple"
+              class="lazy"
+            />
+          </a>
+          <a
+            href="../images/jack-ward-rknrvCrfS1k-unsplash.jpg"
+            data-fancybox="gallery"
+            data-caption="Red image"
+            ><img
+              src="../images/jack-ward-rknrvCrfS1k-unsplash.jpg"
+              width="70"
+              height="70"
+              alt="Red"
+              class="lazy"
+          /></a>
+
+          <a
+            href="../images/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg"
+            data-fancybox="gallery"
+            data-caption="Red image"
+            ><img
+              src="../images/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg"
+              width="70"
+              height="70"
+              alt="Red"
+              class="lazy"
+          /></a>
+
+          <a
+            href="../images/sam-williams-UuGAw6nF0Vw-unsplash.jpg"
+            data-fancybox="gallery"
+            data-caption="Red image"
+            ><img
+              src="../images/sam-williams-UuGAw6nF0Vw-unsplash.jpg"
+              width="70"
+              height="70"
+              alt="Red"
+              class="lazy"
+          /></a>
         </div>
       </div>
 
@@ -63,5 +158,19 @@
         </div>
       </footer>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.1.min.js"
+      integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+    <script src="js/rollover.js"></script>
+    <script type="text/javascript" src="jquery.lazy.min.js"></script>
+    <script>
+      $(function () {
+        $(".lazy").Lazy();
+      });
+      Fancybox.bind("[data-fancybox]", {});
+    </script>
   </body>
 </html>
