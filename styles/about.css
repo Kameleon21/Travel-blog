@@ -6,7 +6,7 @@
   --Text-color: #212121;
 }
 
-.ui.container {
+.container {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -37,7 +37,7 @@
 }
 
 main {
-  padding:2rem;
+  padding: 2rem;
 }
 
 .one {
@@ -66,8 +66,7 @@ footer {
   color: var(--Background-color);
   display: flex;
   justify-content: center;
-  padding: 1rem;
-  min-height: 200px;
+  padding: 2rem !important;
 }
 
 .foot-contain {
@@ -98,4 +97,53 @@ footer {
 
 .extra-content {
   padding: 1rem;
+}
+
+@media screen and (max-width: 800px) {
+  /* picOfMe,
+  .demoGif {
+    height: 300px !important;
+    width: 100% !important;
+  } */
+
+  .menu {
+    gap: 1rem;
+  }
+
+  .menu a {
+    font-size: 1.5rem;
+  }
+
+  .foot-contain {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .main-head {
+    font-size: 2rem;
+  }
+
+  .one,.two {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .picOfMe,
+  .demoGif {
+    height: 200px !important;
+  }
+
+  .menu a {
+    font-size: 1.2rem;
+  }
 }

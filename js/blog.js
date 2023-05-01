@@ -50,7 +50,7 @@ $(() => {
   ];
 
   // shows or hides content
-  const toggleReadMore = (e) => {
+  function toggleReadMore(e) {
     const button = e.target;
     const card = button.closest(".card");
     const extraContent = card.querySelector(".extra-content");
@@ -62,7 +62,7 @@ $(() => {
       extraContent.style.display = "none";
       button.textContent = "Read More";
     }
-  };
+  }
 
   const source = document.getElementById("card-template");
   const template = Handlebars.compile(source.innerHTML);

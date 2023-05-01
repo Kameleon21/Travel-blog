@@ -13,7 +13,7 @@
     <title>Blog</title>
   </head>
   <body>
-    <div class="ui fluid container">
+    <div class="container">
       <!-- Nav Bar -->
       <div class="menu-container">
         <div class="menu">
@@ -27,29 +27,74 @@
 
       <main>
         <div class="main">
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem cupiditate soluta nostrum aliquam rem asperiores labore atque debitis explicabo, quaerat, magnam consectetur sequi natus tenetur? Doloremque ipsum itaque amet blanditiis! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Error tenetur iste nulla fugiat dolorum nisi, reiciendis accusamus, soluta dignissimos quibusdam perspiciatis temporibus, at excepturi dolores expedita id cumque? Error, doloribus.
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+            Exercitationem cupiditate soluta nostrum aliquam rem asperiores
+            labore atque debitis explicabo, quaerat, magnam consectetur sequi
+            natus tenetur? Doloremque ipsum itaque amet blanditiis! Lorem, ipsum
+            dolor sit amet consectetur adipisicing elit. Error tenetur iste
+            nulla fugiat dolorum nisi, reiciendis accusamus, soluta dignissimos
+            quibusdam perspiciatis temporibus, at excepturi dolores expedita id
+            cumque? Error, doloribus.
           </p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae saepe nemo molestias repellat recusandae eveniet minus suscipit dolorum quis, mollitia asperiores fugiat neque ipsa obcaecati qui excepturi vitae ut iste! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis distinctio vel qui autem sapiente omnis dolores placeat iusto saepe ut! Officia ex ullam recusandae ut, quos modi iure consectetur labore?</p>
-          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum totam cum, dolorum ipsa maxime quae inventore, aliquam autem nesciunt enim aperiam debitis deleniti sunt porro facere non laboriosam doloribus obcaecati. Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur fugit sapiente dolore atque, nostrum quo voluptatum optio, eveniet, facere omnis soluta. At praesentium saepe non explicabo, incidunt cum ut quaerat?</p>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed iure accusamus similique recusandae eum, doloribus veniam dolorum non, odit assumenda asperiores autem, aspernatur ut eveniet at quos eius aliquam nisi. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vero, ad eligendi eos odit corrupti obcaecati dolore eius ipsa quae dolorum pariatur facere soluta quas voluptate quia iusto? Repellat, molestias in.</p>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum iusto error quae tempore incidunt voluptatibus eligendi possimus dolorem alias eos aspernatur corporis deserunt nihil consequuntur quam, quo deleniti esse! Doloribus. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veniam non illo facere nulla cumque omnis, aliquid voluptatem voluptates veritatis similique doloremque consequatur saepe, sapiente perspiciatis, repudiandae esse quasi dolorum? Exercitationem.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae
+            saepe nemo molestias repellat recusandae eveniet minus suscipit
+            dolorum quis, mollitia asperiores fugiat neque ipsa obcaecati qui
+            excepturi vitae ut iste! Lorem ipsum dolor sit amet consectetur
+            adipisicing elit. Officiis distinctio vel qui autem sapiente omnis
+            dolores placeat iusto saepe ut! Officia ex ullam recusandae ut, quos
+            modi iure consectetur labore?
+          </p>
+          <p>
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rerum
+            totam cum, dolorum ipsa maxime quae inventore, aliquam autem
+            nesciunt enim aperiam debitis deleniti sunt porro facere non
+            laboriosam doloribus obcaecati. Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Consequuntur fugit sapiente dolore
+            atque, nostrum quo voluptatum optio, eveniet, facere omnis soluta.
+            At praesentium saepe non explicabo, incidunt cum ut quaerat?
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed iure
+            accusamus similique recusandae eum, doloribus veniam dolorum non,
+            odit assumenda asperiores autem, aspernatur ut eveniet at quos eius
+            aliquam nisi. Lorem ipsum dolor sit amet consectetur, adipisicing
+            elit. Vero, ad eligendi eos odit corrupti obcaecati dolore eius ipsa
+            quae dolorum pariatur facere soluta quas voluptate quia iusto?
+            Repellat, molestias in.
+          </p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum iusto
+            error quae tempore incidunt voluptatibus eligendi possimus dolorem
+            alias eos aspernatur corporis deserunt nihil consequuntur quam, quo
+            deleniti esse! Doloribus. Lorem ipsum dolor, sit amet consectetur
+            adipisicing elit. Veniam non illo facere nulla cumque omnis, aliquid
+            voluptatem voluptates veritatis similique doloremque consequatur
+            saepe, sapiente perspiciatis, repudiandae esse quasi dolorum?
+            Exercitationem.
+          </p>
         </div>
         <h3>Latest Blogs</h3>
         <section class="ui link cards" id="cards-container"></section>
         <script id="card-template" type="text/x-handlebars-template">
           <div class="card">
             <div class="image">
-              <img src="{{image}}" alt="{{alt}}" />
+              <img src="{{image}}" alt="{{#if alt}}{{alt}}{{else}}No image description{{/if}}" />
             </div>
             <div class="content">
               <div class="header">{{place}}
-                <i class="flag {{flag}}"></i></div>
+                {{#if flag}}<i class="flag {{flag}}"></i>{{/if}}</div>
             </div>
             <div class="read-more-container">
               <button class="ui grey button read-more">Read More</button>
             </div>
             <div class="extra-content" style="display: none;">
-              {{content}}
+              {{#if content}}
+                <p>{{content}}</p>
+              {{else}}
+                <p>No additional content available.</p>
+              {{/if}}
             </div>
           </div>
         </script>

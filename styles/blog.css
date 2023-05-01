@@ -31,5 +31,15 @@ main {
   place-self: center;
 }
 
+.ui.link.cards {
+  justify-content: center;
+}
+
+/* @media screen and (max-width: 900px) {
+  .ui.link.cards {
+    justify-content: center;
+  }
+} */
+
 
 
