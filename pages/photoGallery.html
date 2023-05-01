@@ -14,6 +14,7 @@
       href="https://cdn.jsdelivr.net/npm/semantic-ui@2.5.0/dist/semantic.min.css"
     />
     <link rel="stylesheet" href="../styles/about.css" />
+    <link rel="stylesheet" href="../styles/photoGallery.css" />
     <title>Photo Gallery</title>
   </head>
   <body>
@@ -29,42 +30,38 @@
       </div>
 
       <div id="container">
-        <h1>Images Taken When Traveling</h1>
-
         <div id="gallery">
+          <h1>Pictures Taken When Traveling</h1>
           <a
             href="../images/adam-jang-MLKrf51NV8w-unsplash.jpg"
-            data-fancybox="gallery"
-            data-caption="Blue image"
+            title="Blue image"
             ><img
               src="../images/adam-jang-MLKrf51NV8w-unsplash.jpg"
-              width="70"
+              width="100"
               height="70"
               alt="Blue"
               class="lazy"
           /></a>
           <a
             href="../images/colton-sturgeon-odKeTFsBDgE-unsplash.jpg"
-            data-fancybox="gallery"
-            data-caption="Yellow image"
+            title="Yellow image"
           >
             <img src="../images/colton-sturgeon-odKeTFsBDgE-unsplash.jpg"
-            width="70" height="70" alt="Yellow" class="lazy" /
+            width="100" height="70" alt="Yellow" class="lazy" /
           </a>
           <a
             href="../images/constantinos-kollias-yqBvJJ8jGBQ-unsplash.jpg"
-            data-fancybox="gallery"
-            data-caption="Green image"
+            title="Green image"
             ><img src="../images/constantinos-kollias-yqBvJJ8jGBQ-unsplash.jpg"
-            width="70" height="70" alt="Green" class="lazy" /
+            width="100" height="70" alt="Green" class="lazy" /
           </a>
           <a
             href="../images/cristina-gottardi-I1Lv2yX67GI-unsplash.jpg"
             data-fancybox="gallery"
-            data-caption="Orange image"
+            title="Orange image"
             ><img
               src="../images/cristina-gottardi-I1Lv2yX67GI-unsplash.jpg"
-              width="70"
+              width="100"
               height="70"
               alt="Orange"
               class="lazy"
@@ -72,10 +69,10 @@
           <a
             href="../images/damiano-baschiera-hFXZ5cNfkOk-unsplash.jpg"
             data-fancybox="gallery"
-            data-caption="Purple image"
+            title="Purple image"
             ><img
               src="../images/damiano-baschiera-hFXZ5cNfkOk-unsplash.jpg"
-              width="70"
+              width="100"
               height="70"
               alt="Purple"
               class="lazy"
@@ -83,11 +80,10 @@
           </a>
           <a
             href="../images/jack-ward-rknrvCrfS1k-unsplash.jpg"
-            data-fancybox="gallery"
-            data-caption="Red image"
+            title="Red image"
             ><img
               src="../images/jack-ward-rknrvCrfS1k-unsplash.jpg"
-              width="70"
+              width="100"
               height="70"
               alt="Red"
               class="lazy"
@@ -95,11 +91,10 @@
 
           <a
             href="../images/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg"
-            data-fancybox="gallery"
-            data-caption="Red image"
+            title="Red image"
             ><img
               src="../images/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg"
-              width="70"
+              width="100"
               height="70"
               alt="Red"
               class="lazy"
@@ -107,15 +102,17 @@
 
           <a
             href="../images/sam-williams-UuGAw6nF0Vw-unsplash.jpg"
-            data-fancybox="gallery"
-            data-caption="Red image"
+            title="Red image"
             ><img
               src="../images/sam-williams-UuGAw6nF0Vw-unsplash.jpg"
-              width="70"
+              width="100"
               height="70"
               alt="Red"
               class="lazy"
           /></a>
+        </div>
+        <div id="photo">
+          <img src="../images/adam-jang-MLKrf51NV8w-unsplash.jpg" alt="" />
         </div>
       </div>
 
@@ -163,14 +160,17 @@
       integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
       crossorigin="anonymous"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
-    <script src="js/rollover.js"></script>
     <script type="text/javascript" src="jquery.lazy.min.js"></script>
     <script>
-      $(function () {
-        $(".lazy").Lazy();
+      $(() => {
+        $("#gallery a img").on("click", function (event) {
+          event.preventDefault();
+          const imgSrc = $(this).attr("src");
+          $("#photo img").fadeOut(200, function () {
+            $(this).attr("src", imgSrc).fadeIn(500);
+          });
+        });
       });
-      Fancybox.bind("[data-fancybox]", {});
     </script>
   </body>
 </html>

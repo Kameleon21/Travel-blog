@@ -1,5 +1,6 @@
 // data set
 $(() => {
+  // data for handlebars
   const data = [
     {
       place: "Italy",
@@ -37,10 +38,19 @@ $(() => {
       content:
         "Iceland is famous for its stunning landscapes, including glaciers, volcanoes, geysers, and waterfalls. The country is also known for the Northern Lights, which attract many visitors during the winter months.",
     },
+    {
+      place: "Norway",
+      flag: "no",
+      month: "December",
+      image: "../images/philipp-kammerer-6Mxb_mZ_Q8E-unsplash.jpg",
+      alt: "picture of Norway",
+      content:
+        "Norway is renowned for its picturesque fjords, rugged coastline, and enchanting natural landscapes. The country offers a variety of outdoor activities such as hiking, skiing, and fishing. During the winter, visitors can also witness the mesmerizing Northern Lights.",
+    },
   ];
 
   // shows or hides content
-  const toggleReadMore =(e) =>  {
+  const toggleReadMore = (e) => {
     const button = e.target;
     const card = button.closest(".card");
     const extraContent = card.querySelector(".extra-content");
@@ -52,7 +62,7 @@ $(() => {
       extraContent.style.display = "none";
       button.textContent = "Read More";
     }
-  }
+  };
 
   const source = document.getElementById("card-template");
   const template = Handlebars.compile(source.innerHTML);
